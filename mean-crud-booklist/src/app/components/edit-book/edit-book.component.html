@@ -1,0 +1,33 @@
+<form (submit)="onSubmit()">
+    <div class="form-group">
+      <label for="isbn">ISBN:</label>
+      <input type="text" class="form-control" id="isbn" [(ngModel)]="book.isbn" name="isbn">
+    </div>
+
+    <div class="form-group">
+      <label for="title">Title:</label>
+      <input type="text" class="form-control" id="title" [(ngModel)]="book.title" name="title">
+    </div>
+
+    <div class="form-group">
+      <label for="author">Author:</label>
+      <input type="text" class="form-control" id="author" [(ngModel)]="book.author" name="author">
+    </div>
+
+    <div class="form-group">
+      <label for="description">Description:</label>
+      <textarea class="form-control" id="description" [(ngModel)]="book.description" name="description"></textarea>
+    </div>
+
+    <div class="form-group">
+      <label for="publishedYear">Published Year:</label>
+      <input type="text" class="form-control" id="publishedYear" [(ngModel)]="book.published_year" name="published_year">
+    </div>
+
+    <div class="form-group">
+      <label for="publisher">Publisher:</label>
+      <input type="text" class="form-control" id="publisher" [(ngModel)]="book.publisher" name="publisher">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Save Changes</button>
+  </form>
