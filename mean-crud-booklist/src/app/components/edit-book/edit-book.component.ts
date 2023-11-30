@@ -8,7 +8,7 @@ import { CrudService } from './../../service/crud.service';
   styleUrls: ['./edit-book.component.css']
 })
 export class EditBookComponent implements OnInit {
-  book: any = {}; // Initialize with an empty book object
+  book: any = {}; 
 
   constructor(
     private route: ActivatedRoute,
@@ -17,7 +17,7 @@ export class EditBookComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    const id = this.route.snapshot.params['id']; // Updated line
+    const id = this.route.snapshot.params['id']; 
     this.crudService.GetBookById(id).subscribe((res: any) => {
       this.book = res;
     });
@@ -26,7 +26,7 @@ export class EditBookComponent implements OnInit {
   onSubmit(): void {
     this.crudService.EditBook(this.book._id, this.book).subscribe((res: any) => {
       console.log('Book updated successfully:', res);
-      this.router.navigate(['/books-list']); // Navigate back to the book list after updating
+      this.router.navigate(['/books-list']); 
     });
   }
   
